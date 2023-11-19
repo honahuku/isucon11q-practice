@@ -1,0 +1,7 @@
+webapp/go/tmp/
+bench/images/*
+go/pkg/*
+local/*
+/env.sh
+.*
+!.gitignore
