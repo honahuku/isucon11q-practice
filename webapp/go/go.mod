@@ -1,6 +1,6 @@
 module github.com/isucon/isucon11-qualify/isucondition
 
-go 1.16
+go 1.21
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
