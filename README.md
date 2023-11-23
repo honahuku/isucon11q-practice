@@ -4,3 +4,14 @@
 ## リンク集
 - [ISUCON11 予選レギュレーション](https://isucon.net/archives/55854734.html)
 - [ISUCON11 予選 当日マニュアル](https://github.com/isucon/isucon11-qualify/blob/main/docs/manual.md)
+
+# コンパイルとサービス再起動
+```bash
+cd webapp/go/
+go build -o isucondition && sudo systemctl restart isucondition.go.service
+```
+
+# ベンチマーク
+```bash
+/home/isucon/bench/bench -all-addresses 127.0.0.11 -target 127.0.0.11:443 -tls -jia-service-url http://127.0.0.1:4999
+```

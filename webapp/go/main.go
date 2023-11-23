@@ -26,6 +26,7 @@ import (
 	"github.com/labstack/gommon/log"
 	ddtrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/labstack/echo.v4"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
+	"gopkg.in/DataDog/dd-trace-go.v1/profiler"
 )
 
 const (
@@ -215,6 +216,21 @@ func main() {
 	)
 	defer tracer.Stop()
 
+	err := profiler.Start(
+		profiler.WithService("isucondition"),
+		profiler.WithProfileTypes(
+			profiler.CPUProfile,
+			profiler.HeapProfile,
+			// profiler.BlockProfile,
+			// profiler.MutexProfile,
+			// profiler.GoroutineProfile,
+		),
+	)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer profiler.Stop()
+
 	e := echo.New()
 	e.Debug = true
 	e.Logger.SetLevel(log.DEBUG)
@@ -247,7 +263,6 @@ func main() {
 
 	mySQLConnectionData = NewMySQLConnectionEnv()
 
-	var err error
 	db, err = mySQLConnectionData.ConnectDB()
 	if err != nil {
 		e.Logger.Fatalf("failed to connect db: %v", err)
