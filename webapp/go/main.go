@@ -24,6 +24,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
+	ddtrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/labstack/echo.v4"
 )
 
 const (
@@ -211,6 +212,7 @@ func main() {
 	e.Debug = true
 	e.Logger.SetLevel(log.DEBUG)
 
+	e.Use(ddtrace.Middleware())
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
