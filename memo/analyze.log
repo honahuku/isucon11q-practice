@@ -1,0 +1,327 @@
+Count: 10059  Time=0.04s (365s)  Lock=0.00s (0s)  Rows_sent=255.7 (2572292), Rows_examined=19652.5 (197684156), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'S' ORDER BY timestamp DESC
+
+Count: 4110  Time=0.04s (180s)  Lock=0.00s (0s)  Rows_sent=1.0 (4016), Rows_examined=25027.4 (102862506), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'S' ORDER BY `timestamp` DESC LIMIT N
+
+Count: 2438  Time=0.06s (152s)  Lock=0.00s (0s)  Rows_sent=385.9 (940709), Rows_examined=32088.7 (78232356), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'S'	AND `timestamp` < 'S'	ORDER BY `timestamp` DESC
+
+Count: 8484  Time=0.02s (128s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  COMMIT
+
+Count: 830  Time=0.07s (56s)  Lock=0.00s (0s)  Rows_sent=648.2 (538006), Rows_examined=34609.3 (28725720), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'S' ORDER BY `timestamp` ASC
+
+Count: 206696  Time=0.00s (18s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), 2users@localhost
+  #
+
+Count: 71822  Time=0.00s (18s)  Lock=0.00s (2s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (71822), isucon[isucon]@localhost
+  INSERT INTO `isu_condition`	(`jia_isu_uuid`, `timestamp`, `is_sitting`, `condition`, `message`)	VALUES ('S', 'S', N, 'S', 'S')
+
+Count: 172  Time=0.04s (6s)  Lock=0.00s (0s)  Rows_sent=1.8 (311), Rows_examined=19374.4 (3332402), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_condition` WHERE `jia_isu_uuid` = 'S'	AND `timestamp` < 'S'	AND 'S' <= `timestamp`	ORDER BY `timestamp` DESC
+
+Count: 7209  Time=0.00s (1s)  Lock=0.00s (0s)  Rows_sent=1.0 (7209), Rows_examined=0.0 (107), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT COUNT(*) FROM `isu` WHERE `jia_isu_uuid` = 'S'
+
+Count: 2102  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=2.9 (6192), Rows_examined=6.8 (14320), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu` WHERE `character` = 'S'
+
+Count: 5929  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.0 (5929), Rows_examined=0.0 (17), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT COUNT(*) FROM `user` WHERE `jia_user_id` = 'S'
+
+Count: 2549  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.0 (2455), Rows_examined=0.1 (206), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT `image` FROM `isu` WHERE `jia_user_id` = 'S' AND `jia_isu_uuid` = 'S'
+
+Count: 1500  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.9 (1407), Rows_examined=0.0 (64), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT name FROM `isu` WHERE `jia_isu_uuid` = 'S' AND `jia_user_id` = 'S'
+
+Count: 407  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=5.8 (2360), Rows_examined=6.2 (2513), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu` WHERE `jia_user_id` = 'S' ORDER BY `id` DESC
+
+Count: 502  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.8 (410), Rows_examined=0.3 (166), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu` WHERE `jia_user_id` = 'S' AND `jia_isu_uuid` = 'S'
+
+Count: 8241  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  START TRANSACTION
+
+Count: 2  Time=0.09s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=28.0 (56), isucon[isucon]@localhost
+  INSERT INTO `isu` VALUES (N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S'),(N,'S','S','S','S','S','S','S')
+
+Count: 204  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (8), isucon[isucon]@localhost
+  INSERT IGNORE INTO user (`jia_user_id`) VALUES ('S')
+
+Count: 576  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=3.1 (1778), Rows_examined=0.1 (54), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT COUNT(*) FROM `isu` WHERE `jia_user_id` = 'S' AND `jia_isu_uuid` = 'S'
+
+Count: 2  Time=0.05s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  CREATE TABLE `isu_association_config` (
+  `name` VARCHAR(N) PRIMARY KEY,
+  `url` VARCHAR(N) NOT NULL UNIQUE
+  ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4
+
+Count: 55  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (53), isucon[isucon]@localhost
+  INSERT INTO `isu`	(`jia_isu_uuid`, `name`, `image`, `jia_user_id`) VALUES ('S', 'S', 'S', 'S')
+
+Count: 51  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=1.0 (51), Rows_affected=1.0 (51), isucon[isucon]@localhost
+  UPDATE `isu` SET `character` = 'S' WHERE  `jia_isu_uuid` = 'S'
+
+Count: 97  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  ROLLBACK
+
+Count: 2  Time=0.02s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=618.0 (1236), isucon[isucon]@localhost
+  INSERT INTO `isu_condition` VALUES (N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S'),(N,'S','S',N,'S','S','S')
+
+Count: 52  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.0 (52), Rows_examined=0.0 (1), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT * FROM `isu_association_config` WHERE `name` = 'S'
+
+Count: 84  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=25.0 (2100), Rows_examined=14.6 (1230), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  SELECT `character` FROM `isu` GROUP BY `character`
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  CREATE TABLE `isu` (
+  `id` bigint AUTO_INCREMENT,
+  `jia_isu_uuid` CHAR(N) NOT NULL UNIQUE,
+  `name` VARCHAR(N) NOT NULL,
+  `image` LONGBLOB,
+  `character` VARCHAR(N),
+  `jia_user_id` VARCHAR(N) NOT NULL,
+  `created_at` DATETIME(N) DEFAULT CURRENT_TIMESTAMP(N),
+  `updated_at` DATETIME(N) DEFAULT CURRENT_TIMESTAMP(N) ON UPDATE CURRENT_TIMESTAMP(N),
+  PRIMARY KEY(`id`)
+  ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  DROP TABLE IF EXISTS `isu_association_config`
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  CREATE TABLE `isu_condition` (
+  `id` bigint AUTO_INCREMENT,
+  `jia_isu_uuid` CHAR(N) NOT NULL,
+  `timestamp` DATETIME NOT NULL,
+  `is_sitting` TINYINT(N) NOT NULL,
+  `condition` VARCHAR(N) NOT NULL,
+  `message` VARCHAR(N) NOT NULL,
+  `created_at` DATETIME(N) DEFAULT CURRENT_TIMESTAMP(N),
+  PRIMARY KEY(`id`)
+  ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  CREATE TABLE `user` (
+  `jia_user_id` VARCHAR(N) PRIMARY KEY,
+  `created_at` DATETIME(N) DEFAULT CURRENT_TIMESTAMP(N)
+  ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8mb4
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  DROP TABLE IF EXISTS `isu_condition`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=25.0 (75), Rows_examined=35.0 (105), Rows_affected=0.0 (0), root[root]@localhost
+  select concat('S',
+  TABLE_SCHEMA, 'S', TABLE_NAME, 'S') 
+  from information_schema.TABLES where TABLE_SCHEMA<>'S' and TABLE_SCHEMA<>'S' and ( ENGINE='S' or ENGINE='S' )
+
+Count: 1  Time=0.01s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  DROP TABLE IF EXISTS `user`
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  DROP TABLE IF EXISTS `isu`
+
+Count: 5  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.4 (7), Rows_examined=1.4 (7), Rows_affected=0.0 (0), 2users@localhost
+  show variables like 'S'
+
+Count: 4  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  UNLOCK TABLES
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=5.0 (5), isucon[isucon]@localhost
+  INSERT INTO `user` VALUES ('S','S'),('S','S'),('S','S'),('S','S'),('S','S')
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (1), isucon[isucon]@localhost
+  INSERT INTO `isu_association_config` (`name`, `url`) VALUES ('S', 'S') ON DUPLICATE KEY UPDATE `url` = VALUES(`url`)
+
+Count: 4  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.0 (3), Rows_examined=2.0 (6), Rows_affected=0.0 (0), root[root]@localhost
+  SELECT count(*) FROM mysql.user WHERE user='S' and password='S' and plugin='S'
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), root[root]@localhost
+  SET SQL_LOG_BIN=N, WSREP_ON=OFF
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=4.0 (4), Rows_examined=4.0 (4), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  show databases
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`help_relation`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`help_keyword`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`table_stats`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`time_zone_name`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`event`
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu` ENABLE KEYS */
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`procs_priv`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`help_topic`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`time_zone_transition_type`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`servers`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`user`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`help_category`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`time_zone`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`plugin`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`index_stats`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`host`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`time_zone_transition`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`time_zone_leap_second`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`roles_mapping`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`db`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`proc`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`func`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`column_stats`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`columns_priv`
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu_condition` ENABLE KEYS */
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`tables_priv`
+
+Count: 3  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=1.0 (3), root[root]@localhost
+  select count(*) into @discard from `mysql`.`proxies_priv`
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=4.0 (4), Rows_examined=4.0 (4), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  show tables
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu` DISABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=1.0 (1), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  select @@version_comment limit N
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu_association_config` DISABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `user` ENABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET TIME_ZONE=@OLD_TIME_ZONE */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `user` DISABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET NAMES utf8mb4 */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu_condition` DISABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=N */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET TIME_ZONE='S' */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N ALTER TABLE `isu_association_config` ENABLE KEYS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='S' */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET SQL_MODE=@OLD_SQL_MODE */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_TIME_ZONE=@@TIME_ZONE */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=N */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  LOCK TABLES `isu` WRITE
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  /*!N SET SQL_NOTES=@OLD_SQL_NOTES */
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  LOCK TABLES `user` WRITE
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  LOCK TABLES `isu_condition` WRITE
+
+Count: 1  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), isucon[isucon]@localhost
+  LOCK TABLES `isu_association_config` WRITE
+
+Count: 103285  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), 0users@0hosts
+  administrator command: Prepare
+
+Count: 150  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), 0users@0hosts
+  administrator command: Quit
+
+Count: 103261  Time=0.00s (0s)  Lock=0.00s (0s)  Rows_sent=0.0 (0), Rows_examined=0.0 (0), Rows_affected=0.0 (0), 0users@0hosts
+  administrator command: Close stmt
+
