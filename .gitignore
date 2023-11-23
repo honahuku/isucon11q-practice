@@ -1,6 +1,6 @@
 webapp/go/tmp/
 bench/images/*
-go/pkg/*
+go/*
 local/*
 /env.sh
 .*
