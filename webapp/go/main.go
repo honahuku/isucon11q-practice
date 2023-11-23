@@ -25,6 +25,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
 	ddtrace "gopkg.in/DataDog/dd-trace-go.v1/contrib/labstack/echo.v4"
+	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 )
 
 const (
@@ -208,6 +209,12 @@ func init() {
 }
 
 func main() {
+	tracer.Start(
+		tracer.WithService("isucondition"),
+		tracer.WithEnv("host04"),
+	)
+	defer tracer.Stop()
+
 	e := echo.New()
 	e.Debug = true
 	e.Logger.SetLevel(log.DEBUG)
