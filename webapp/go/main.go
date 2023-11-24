@@ -158,7 +158,6 @@ type TrendResponse struct {
 type TrendCondition struct {
 	ID        int   `json:"isu_id"`
 	Timestamp int64 `json:"timestamp"`
-	ConditionLevel string
 }
 
 type PostIsuConditionRequest struct {
@@ -1131,46 +1130,42 @@ func getTrend(c echo.Context) error {
 
 	res := []TrendResponse{}
 
-	characterConditionsMap := make(map[string][]*TrendCondition)
+	characterConditionsMap := make(map[string]*TrendResponse)
 
 	for _, item := range combinedList {
+		// characterConditionsMapの初期化
+		if _, exists := characterConditionsMap[item.Character]; !exists {
+			characterConditionsMap[item.Character] = &TrendResponse{
+				Character: item.Character,
+				Info:      []*TrendCondition{},
+				Warning:   []*TrendCondition{},
+				Critical:  []*TrendCondition{},
+			}
+		}
+
 		conditionLevel, err := calculateConditionLevel(item.Condition)
 		if err != nil {
 			c.Logger().Error(err)
 			return c.NoContent(http.StatusInternalServerError)
 		}
 
-		trrandCondition := TrendCondition{
+		trendCondition := TrendCondition{
 			ID:        item.ID,
 			Timestamp: item.Timestamp.Unix(),
-			ConditionLevel: conditionLevel,
 		}
 
-		characterConditionsMap[item.Character] = append(characterConditionsMap[item.Character], &trrandCondition)
+		switch conditionLevel {
+		case "info":
+			characterConditionsMap[item.Character].Info = append(characterConditionsMap[item.Character].Info, &trendCondition)
+		case "warning":
+			characterConditionsMap[item.Character].Warning = append(characterConditionsMap[item.Character].Warning, &trendCondition)
+		case "critical":
+			characterConditionsMap[item.Character].Critical = append(characterConditionsMap[item.Character].Critical, &trendCondition)
+		}
 	}
 
-	for character, conditions := range characterConditionsMap {
-		infoConditons := []*TrendCondition{}
-		warningConditions := []*TrendCondition{}
-		criticalConditions := []*TrendCondition{}
-
-		for _, condition := range conditions {
-			switch condition.ConditionLevel {
-			case "info":
-				infoConditons = append(infoConditons, condition)
-			case "warning":
-				warningConditions = append(warningConditions, condition)
-			case "critical":
-				criticalConditions = append(criticalConditions, condition)
-			}
-		}
-
-		res = append(res, TrendResponse{
-			Character: character,
-			Info:      infoConditons,
-			Warning:   warningConditions,
-			Critical:  criticalConditions,
-		})
+	for _, response := range characterConditionsMap {
+		res = append(res, *response)
 	}
 
 	return c.JSON(http.StatusOK, res)
